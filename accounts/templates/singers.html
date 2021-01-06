@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+}
+{% block content %}
+<h1>All Singers Page</h1>
+<p>Citys Registered in the music:</p>
+<ul>
+{% for singer in singers %}
+    <li><strong>{{ singer }}</strong><a href="{% url 'edit_singer' singer.id %}">Edit </a> - <a href="{% url 'delete_singer' singer.id %}">Delete </a></li>
+{% endfor %}
+</ul>
+<p>
+    <a href="{% url 'add_singer' %}">Add Singer</a>
+</p>
+{% endblock %}

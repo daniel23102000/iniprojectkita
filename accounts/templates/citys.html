@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+}
+{% block content %}
+<h1>All Citys Page</h1>
+<p>Citys Registered in the music:</p>
+<ul>
+{% for city in citys %}
+    <li><strong>{{ city }}</strong><a href="{% url 'edit_city' city.id %}">Edit </a> - <a href="{% url 'delete_city' city.id %}">Delete </a></li>
+{% endfor %}
+</ul>
+<p>
+    <a href="{% url 'add_city' %}">Add City</a>
+</p>
+{% endblock %}

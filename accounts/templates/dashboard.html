@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>All Musictitle Page</h1>
+<p>Composers Registered in the music:</p>
+<ul>
+{% for musictitle in musictitles %}
+<li><strong>{{ musictitle.title }}</strong>({{musictitle.composer}}) - <a href="{% url 'edit_musictitle' musictitle.id %}" >Edit</a> - <a href="{% url 'delete_musictitle' musictitle.id %}">Delete</a></li>
+{% endfor %}
+</ul>
+<p>
+    <a href="{% url 'add_musictitle' %}">Add Musictitle</a>
+</p>
+{% endblock %}

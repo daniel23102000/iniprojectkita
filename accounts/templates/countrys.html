@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+}
+{% block content %}
+<h1>All Countrys Page</h1>
+<p>Genres Registered in the music:</p>
+<ul>
+{% for country in countrys %}
+    <li><strong>{{ country }}</strong><a href="{% url 'edit_country' country.id %}">Edit </a> - <a href="{% url 'delete_country' country.id %}">Delete </a></li>
+{% endfor %}
+</ul>
+<p>
+    <a href="{% url 'add_country' %}">Add Country</a>
+</p>
+{% endblock %}

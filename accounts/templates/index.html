@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Home Page</h1>
+<p>Welcome !</p>
+<h2>Dynamic content</h2>
+<p>The Music has the following record counts:</p>
+<ul>
+    <li><strong>Musictitles:</strong> {{ num_musictitles }}</li>
+    <li><strong>Composers:</strong> {{ num_composers }}</li>
+    <li><strong>Genres:</strong> {{ num_genres }}</li>
+</ul>
+{% endblock %}
